@@ -1,0 +1,10 @@
+cc/mallet/util/tests/TestAStar$1.class
+cc/mallet/pipe/CharSequenceRemoveHTML$1.class
+cc/mallet/util/CommandOption$1.class
+cc/mallet/types/tests/TestSerializable$1.class
+cc/mallet/pipe/tests/TestPipeUtils$1.class
+cc/mallet/util/tests/TestPriorityQueue$1.class
+cc/mallet/types/PagedInstanceList$1.class
+cc/mallet/types/InstanceList$1.class
+cc/mallet/fst/confidence/ConfidenceEvaluator$1.class
+cc/mallet/fst/MaxLatticeDefault$1.class

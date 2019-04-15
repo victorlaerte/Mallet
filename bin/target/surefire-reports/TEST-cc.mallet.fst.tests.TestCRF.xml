@@ -1,0 +1,810 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite tests="23" failures="4" name="cc.mallet.fst.tests.TestCRF" time="75.807" errors="0" skipped="0">
+  <properties>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="sun.boot.library.path" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_131.jdk/Contents/Home/jre/lib"/>
+    <property name="java.vm.version" value="25.131-b11"/>
+    <property name="user.country.format" value="BR"/>
+    <property name="gopherProxySet" value="false"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="maven.multiModuleProjectDirectory" value="/Users/victoroliveira/Documents/workspace/Mallet"/>
+    <property name="java.vendor.url" value="http://java.oracle.com/"/>
+    <property name="path.separator" value=":"/>
+    <property name="guice.disable.misplaced.annotation.check" value="true"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="file.encoding.pkg" value="sun.io"/>
+    <property name="user.country" value="US"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="sun.os.patch.level" value="unknown"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="user.dir" value="/Users/victoroliveira/Documents/workspace/Mallet"/>
+    <property name="java.runtime.version" value="1.8.0_131-b11"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.CGraphicsEnvironment"/>
+    <property name="java.endorsed.dirs" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_131.jdk/Contents/Home/jre/lib/endorsed"/>
+    <property name="os.arch" value="x86_64"/>
+    <property name="java.io.tmpdir" value="/var/folders/1h/fdknrgyd5kbb1ys70ln2jdjw0000gn/T/"/>
+    <property name="line.separator" value="
+"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="os.name" value="Mac OS X"/>
+    <property name="classworlds.conf" value="/usr/local/Cellar/maven/3.5.0/libexec/bin/m2.conf"/>
+    <property name="sun.jnu.encoding" value="UTF-8"/>
+    <property name="java.library.path" value="/Users/victoroliveira/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:."/>
+    <property name="maven.conf" value="/usr/local/Cellar/maven/3.5.0/libexec/conf"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.class.version" value="52.0"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="os.version" value="10.14.3"/>
+    <property name="library.jansi.path" value="/usr/local/Cellar/maven/3.5.0/libexec/lib/jansi-native/osx64"/>
+    <property name="http.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="user.home" value="/Users/victoroliveira"/>
+    <property name="user.timezone" value="America/Recife"/>
+    <property name="java.awt.printerjob" value="sun.lwawt.macosx.CPrinterJob"/>
+    <property name="java.specification.version" value="1.8"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="user.name" value="victoroliveira"/>
+    <property name="java.class.path" value="/usr/local/Cellar/maven/3.5.0/libexec/boot/plexus-classworlds-2.5.2.jar"/>
+    <property name="java.vm.specification.version" value="1.8"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.home" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_131.jdk/Contents/Home/jre"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher install"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="user.language" value="en"/>
+    <property name="awt.toolkit" value="sun.lwawt.macosx.LWCToolkit"/>
+    <property name="java.vm.info" value="mixed mode"/>
+    <property name="java.version" value="1.8.0_131"/>
+    <property name="java.ext.dirs" value="/Users/victoroliveira/Library/Java/Extensions:/Library/Java/JavaVirtualMachines/jdk1.8.0_131.jdk/Contents/Home/jre/lib/ext:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java"/>
+    <property name="sun.boot.class.path" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_131.jdk/Contents/Home/jre/lib/resources.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_131.jdk/Contents/Home/jre/lib/rt.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_131.jdk/Contents/Home/jre/lib/sunrsasign.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_131.jdk/Contents/Home/jre/lib/jsse.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_131.jdk/Contents/Home/jre/lib/jce.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_131.jdk/Contents/Home/jre/lib/charsets.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_131.jdk/Contents/Home/jre/lib/jfr.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_131.jdk/Contents/Home/jre/classes"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="maven.home" value="/usr/local/Cellar/maven/3.5.0/libexec"/>
+    <property name="file.separator" value="/"/>
+    <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeBig"/>
+    <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="sun.cpu.isalist" value=""/>
+  </properties>
+  <testcase classname="cc.mallet.fst.tests.TestCRF" name="testPrint" time="0"/>
+  <testcase classname="cc.mallet.fst.tests.TestCRF" name="testGetSetParameters" time="0"/>
+  <testcase classname="cc.mallet.fst.tests.TestCRF" name="testSumLogProb" time="0"/>
+  <testcase classname="cc.mallet.fst.tests.TestCRF" name="testIncrement" time="0"/>
+  <testcase classname="cc.mallet.fst.tests.TestCRF" name="testSumLattice" time="0"/>
+  <testcase classname="cc.mallet.fst.tests.TestCRF" name="testMaxLattice" time="0"/>
+  <testcase classname="cc.mallet.fst.tests.TestCRF" name="testCost" time="0.102">
+    <failure message="Value should be 35770 but is-335344.0" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: Value should be 35770 but is-335344.0
+	at junit.framework.Assert.fail(Assert.java:50)
+	at junit.framework.Assert.assertTrue(Assert.java:20)
+	at cc.mallet.fst.tests.TestCRF.doTestCost(TestCRF.java:367)
+	at cc.mallet.fst.tests.TestCRF.testCost(TestCRF.java:373)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at junit.framework.TestCase.runTest(TestCase.java:168)
+	at junit.framework.TestCase.runBare(TestCase.java:134)
+	at junit.framework.TestResult$1.protect(TestResult.java:110)
+	at junit.framework.TestResult.runProtected(TestResult.java:128)
+	at junit.framework.TestResult.run(TestResult.java:113)
+	at junit.framework.TestCase.run(TestCase.java:124)
+	at junit.framework.TestSuite.runTest(TestSuite.java:243)
+	at junit.framework.TestSuite.run(TestSuite.java:238)
+	at org.junit.internal.runners.JUnit38ClassRunner.run(JUnit38ClassRunner.java:83)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+</failure>
+    <system-err>CRF input dictionary size = 4
+CRF using dense weights, num input features = 4
+Number of weights = 125
+getValue() (loglikelihood, optimizable by label likelihood) = -6.437751649736401
+getValue() (loglikelihood, optimizable by label likelihood) = -6.437751649736401
+getValue() (loglikelihood, optimizable by label likelihood) = -6.437751649736401
+getValue() (loglikelihood, optimizable by label likelihood) = -6.437751649736401
+getValue() (loglikelihood, optimizable by label likelihood) = -6.437751649736401
+getValue() (loglikelihood, optimizable by label likelihood) = -6.437751649736401
+getValue() (loglikelihood, optimizable by label likelihood) = -6.437751649736401
+getValue() (loglikelihood, optimizable by label likelihood) = -6.437751649736401
+getValue() (loglikelihood, optimizable by label likelihood) = -6.437751649736401
+getValue() (loglikelihood, optimizable by label likelihood) = -6.437751649736401
+getValue() (loglikelihood, optimizable by label likelihood) = -6.437751649736401
+getValue() (loglikelihood, optimizable by label likelihood) = -6.437751649736401
+getValue() (loglikelihood, optimizable by label likelihood) = -6.437751649736401
+getValue() (loglikelihood, optimizable by label likelihood) = -6.437751649736401
+getValue() (loglikelihood, optimizable by label likelihood) = -6.437751649736401
+getValue() (loglikelihood, optimizable by label likelihood) = -6.437751649736401
+getValue() (loglikelihood, optimizable by label likelihood) = -6.437751649736401
+getValue() (loglikelihood, optimizable by label likelihood) = -6.437751649736401
+getValue() (loglikelihood, optimizable by label likelihood) = -6.437751649736401
+getValue() (loglikelihood, optimizable by label likelihood) = -6.437751649736401
+getValue() (loglikelihood, optimizable by label likelihood) = -6.437751649736401
+getValue() (loglikelihood, optimizable by label likelihood) = -8.411226024080857
+getValue() (loglikelihood, optimizable by label likelihood) = -30.7171851542003
+getValue() (loglikelihood, optimizable by label likelihood) = -114.70805025744042
+getValue() (loglikelihood, optimizable by label likelihood) = -116.70805025744042
+getValue() (loglikelihood, optimizable by label likelihood) = -138.70930027890265
+getValue() (loglikelihood, optimizable by label likelihood) = -238.12692836130753
+getValue() (loglikelihood, optimizable by label likelihood) = -516.0000000069854
+getValue() (loglikelihood, optimizable by label likelihood) = -534.0000000069854
+getValue() (loglikelihood, optimizable by label likelihood) = -594.0000000069905
+getValue() (loglikelihood, optimizable by label likelihood) = -774.0024756920855
+getValue() (loglikelihood, optimizable by label likelihood) = -1218.0000016548493
+getValue() (loglikelihood, optimizable by label likelihood) = -1290.0000016548493
+getValue() (loglikelihood, optimizable by label likelihood) = -1490.0000016548493
+getValue() (loglikelihood, optimizable by label likelihood) = -1940.0000077990528
+getValue() (loglikelihood, optimizable by label likelihood) = -2868.6931472285833
+getValue() (loglikelihood, optimizable by label likelihood) = -3068.6931472285833
+getValue() (loglikelihood, optimizable by label likelihood) = -3518.6931472285833
+getValue() (loglikelihood, optimizable by label likelihood) = -4400.693147232705
+getValue() (loglikelihood, optimizable by label likelihood) = -6040.693147172316
+getValue() (loglikelihood, optimizable by label likelihood) = -6040.693147172316
+getValue() (loglikelihood, optimizable by label likelihood) = -6058.693146342848
+getValue() (loglikelihood, optimizable by label likelihood) = -6184.56621916878
+getValue() (loglikelihood, optimizable by label likelihood) = -6604.69314718056
+getValue() (loglikelihood, optimizable by label likelihood) = -6622.69314718056
+getValue() (loglikelihood, optimizable by label likelihood) = -6750.693147180838
+getValue() (loglikelihood, optimizable by label likelihood) = -7208.693482587963
+getValue() (loglikelihood, optimizable by label likelihood) = -8436.000000000002
+getValue() (loglikelihood, optimizable by label likelihood) = -8564.000000000002
+getValue() (loglikelihood, optimizable by label likelihood) = -9014.000000000002
+getValue() (loglikelihood, optimizable by label likelihood) = -10166.693147236829
+getValue() (loglikelihood, optimizable by label likelihood) = -12830.0
+getValue() (loglikelihood, optimizable by label likelihood) = -13280.0
+getValue() (loglikelihood, optimizable by label likelihood) = -14384.0
+getValue() (loglikelihood, optimizable by label likelihood) = -16764.0
+getValue() (loglikelihood, optimizable by label likelihood) = -21342.0
+getValue() (loglikelihood, optimizable by label likelihood) = -22494.0
+getValue() (loglikelihood, optimizable by label likelihood) = -24944.0
+getValue() (loglikelihood, optimizable by label likelihood) = -29552.0
+getValue() (loglikelihood, optimizable by label likelihood) = -37568.03597629975
+getValue() (loglikelihood, optimizable by label likelihood) = -37568.03597629975
+getValue() (loglikelihood, optimizable by label likelihood) = -37640.03597629975
+getValue() (loglikelihood, optimizable by label likelihood) = -38090.03593090085
+getValue() (loglikelihood, optimizable by label likelihood) = -39504.03597629975
+getValue() (loglikelihood, optimizable by label likelihood) = -39576.03597629975
+getValue() (loglikelihood, optimizable by label likelihood) = -40026.03597629975
+getValue() (loglikelihood, optimizable by label likelihood) = -41484.03597629975
+getValue() (loglikelihood, optimizable by label likelihood) = -45012.71129710848
+getValue() (loglikelihood, optimizable by label likelihood) = -45462.71129710848
+getValue() (loglikelihood, optimizable by label likelihood) = -46920.71129710848
+getValue() (loglikelihood, optimizable by label likelihood) = -50504.693169880265
+getValue() (loglikelihood, optimizable by label likelihood) = -57934.0
+getValue() (loglikelihood, optimizable by label likelihood) = -59392.0
+getValue() (loglikelihood, optimizable by label likelihood) = -62920.0
+getValue() (loglikelihood, optimizable by label likelihood) = -70120.0
+getValue() (loglikelihood, optimizable by label likelihood) = -83684.0
+getValue() (loglikelihood, optimizable by label likelihood) = -87212.0
+getValue() (loglikelihood, optimizable by label likelihood) = -94412.0
+getValue() (loglikelihood, optimizable by label likelihood) = -107534.0
+getValue() (loglikelihood, optimizable by label likelihood) = -129710.0
+getValue() (loglikelihood, optimizable by label likelihood) = -129710.0
+getValue() (loglikelihood, optimizable by label likelihood) = -129910.0
+getValue() (loglikelihood, optimizable by label likelihood) = -131062.0
+getValue() (loglikelihood, optimizable by label likelihood) = -134534.0
+getValue() (loglikelihood, optimizable by label likelihood) = -134734.0
+getValue() (loglikelihood, optimizable by label likelihood) = -135886.0
+getValue() (loglikelihood, optimizable by label likelihood) = -139414.0
+getValue() (loglikelihood, optimizable by label likelihood) = -147606.0
+getValue() (loglikelihood, optimizable by label likelihood) = -148758.0
+getValue() (loglikelihood, optimizable by label likelihood) = -152286.0
+getValue() (loglikelihood, optimizable by label likelihood) = -160478.0
+getValue() (loglikelihood, optimizable by label likelihood) = -176704.0
+getValue() (loglikelihood, optimizable by label likelihood) = -180232.0
+getValue() (loglikelihood, optimizable by label likelihood) = -188424.0
+getValue() (loglikelihood, optimizable by label likelihood) = -204692.0
+getValue() (loglikelihood, optimizable by label likelihood) = -233888.69314718057
+getValue() (loglikelihood, optimizable by label likelihood) = -242080.69314718057
+getValue() (loglikelihood, optimizable by label likelihood) = -258280.69314718057
+getValue() (loglikelihood, optimizable by label likelihood) = -287080.69314718054
+getValue() (loglikelihood, optimizable by label likelihood) = -335344.0
+</system-err>
+  </testcase>
+  <testcase classname="cc.mallet.fst.tests.TestCRF" name="testCostSerialized" time="0.085">
+    <failure message="Value should be 35770 but is-335344.0" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: Value should be 35770 but is-335344.0
+	at junit.framework.Assert.fail(Assert.java:50)
+	at junit.framework.Assert.assertTrue(Assert.java:20)
+	at cc.mallet.fst.tests.TestCRF.doTestCost(TestCRF.java:367)
+	at cc.mallet.fst.tests.TestCRF.testCostSerialized(TestCRF.java:377)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at junit.framework.TestCase.runTest(TestCase.java:168)
+	at junit.framework.TestCase.runBare(TestCase.java:134)
+	at junit.framework.TestResult$1.protect(TestResult.java:110)
+	at junit.framework.TestResult.runProtected(TestResult.java:128)
+	at junit.framework.TestResult.run(TestResult.java:113)
+	at junit.framework.TestCase.run(TestCase.java:124)
+	at junit.framework.TestSuite.runTest(TestSuite.java:243)
+	at junit.framework.TestSuite.run(TestSuite.java:238)
+	at org.junit.internal.runners.JUnit38ClassRunner.run(JUnit38ClassRunner.java:83)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+</failure>
+    <system-err>CRF input dictionary size = 4
+Wrote out CRF
+CRF parameters. hyperbolicPriorSlope: 0.2. hyperbolicPriorSharpness: 10.0. gaussianPriorVariance: 1.0
+Read in CRF.
+CRF parameters. hyperbolicPriorSlope: 0.2. hyperbolicPriorSharpness: 10.0. gaussianPriorVariance: 1.0
+Wrote out CRF
+CRF using dense weights, num input features = 4
+Number of weights = 125
+getValue() (loglikelihood, optimizable by label likelihood) = -6.437751649736401
+getValue() (loglikelihood, optimizable by label likelihood) = -6.437751649736401
+getValue() (loglikelihood, optimizable by label likelihood) = -6.437751649736401
+getValue() (loglikelihood, optimizable by label likelihood) = -6.437751649736401
+getValue() (loglikelihood, optimizable by label likelihood) = -6.437751649736401
+getValue() (loglikelihood, optimizable by label likelihood) = -6.437751649736401
+getValue() (loglikelihood, optimizable by label likelihood) = -6.437751649736401
+getValue() (loglikelihood, optimizable by label likelihood) = -6.437751649736401
+getValue() (loglikelihood, optimizable by label likelihood) = -6.437751649736401
+getValue() (loglikelihood, optimizable by label likelihood) = -6.437751649736401
+getValue() (loglikelihood, optimizable by label likelihood) = -6.437751649736401
+getValue() (loglikelihood, optimizable by label likelihood) = -6.437751649736401
+getValue() (loglikelihood, optimizable by label likelihood) = -6.437751649736401
+getValue() (loglikelihood, optimizable by label likelihood) = -6.437751649736401
+getValue() (loglikelihood, optimizable by label likelihood) = -6.437751649736401
+getValue() (loglikelihood, optimizable by label likelihood) = -6.437751649736401
+getValue() (loglikelihood, optimizable by label likelihood) = -6.437751649736401
+getValue() (loglikelihood, optimizable by label likelihood) = -6.437751649736401
+getValue() (loglikelihood, optimizable by label likelihood) = -6.437751649736401
+getValue() (loglikelihood, optimizable by label likelihood) = -6.437751649736401
+getValue() (loglikelihood, optimizable by label likelihood) = -6.437751649736401
+getValue() (loglikelihood, optimizable by label likelihood) = -8.411226024080857
+getValue() (loglikelihood, optimizable by label likelihood) = -30.7171851542003
+getValue() (loglikelihood, optimizable by label likelihood) = -114.70805025744042
+getValue() (loglikelihood, optimizable by label likelihood) = -116.70805025744042
+getValue() (loglikelihood, optimizable by label likelihood) = -138.70930027890265
+getValue() (loglikelihood, optimizable by label likelihood) = -238.12692836130753
+getValue() (loglikelihood, optimizable by label likelihood) = -516.0000000069854
+getValue() (loglikelihood, optimizable by label likelihood) = -534.0000000069854
+getValue() (loglikelihood, optimizable by label likelihood) = -594.0000000069905
+getValue() (loglikelihood, optimizable by label likelihood) = -774.0024756920855
+getValue() (loglikelihood, optimizable by label likelihood) = -1218.0000016548493
+getValue() (loglikelihood, optimizable by label likelihood) = -1290.0000016548493
+getValue() (loglikelihood, optimizable by label likelihood) = -1490.0000016548493
+getValue() (loglikelihood, optimizable by label likelihood) = -1940.0000077990528
+getValue() (loglikelihood, optimizable by label likelihood) = -2868.6931472285833
+getValue() (loglikelihood, optimizable by label likelihood) = -3068.6931472285833
+getValue() (loglikelihood, optimizable by label likelihood) = -3518.6931472285833
+getValue() (loglikelihood, optimizable by label likelihood) = -4400.693147232705
+getValue() (loglikelihood, optimizable by label likelihood) = -6040.693147172316
+getValue() (loglikelihood, optimizable by label likelihood) = -6040.693147172316
+getValue() (loglikelihood, optimizable by label likelihood) = -6058.693146342848
+getValue() (loglikelihood, optimizable by label likelihood) = -6184.56621916878
+getValue() (loglikelihood, optimizable by label likelihood) = -6604.69314718056
+getValue() (loglikelihood, optimizable by label likelihood) = -6622.69314718056
+getValue() (loglikelihood, optimizable by label likelihood) = -6750.693147180838
+getValue() (loglikelihood, optimizable by label likelihood) = -7208.693482587963
+getValue() (loglikelihood, optimizable by label likelihood) = -8436.000000000002
+getValue() (loglikelihood, optimizable by label likelihood) = -8564.000000000002
+getValue() (loglikelihood, optimizable by label likelihood) = -9014.000000000002
+getValue() (loglikelihood, optimizable by label likelihood) = -10166.693147236829
+getValue() (loglikelihood, optimizable by label likelihood) = -12830.0
+getValue() (loglikelihood, optimizable by label likelihood) = -13280.0
+getValue() (loglikelihood, optimizable by label likelihood) = -14384.0
+getValue() (loglikelihood, optimizable by label likelihood) = -16764.0
+getValue() (loglikelihood, optimizable by label likelihood) = -21342.0
+getValue() (loglikelihood, optimizable by label likelihood) = -22494.0
+getValue() (loglikelihood, optimizable by label likelihood) = -24944.0
+getValue() (loglikelihood, optimizable by label likelihood) = -29552.0
+getValue() (loglikelihood, optimizable by label likelihood) = -37568.03597629975
+getValue() (loglikelihood, optimizable by label likelihood) = -37568.03597629975
+getValue() (loglikelihood, optimizable by label likelihood) = -37640.03597629975
+getValue() (loglikelihood, optimizable by label likelihood) = -38090.03593090085
+getValue() (loglikelihood, optimizable by label likelihood) = -39504.03597629975
+getValue() (loglikelihood, optimizable by label likelihood) = -39576.03597629975
+getValue() (loglikelihood, optimizable by label likelihood) = -40026.03597629975
+getValue() (loglikelihood, optimizable by label likelihood) = -41484.03597629975
+getValue() (loglikelihood, optimizable by label likelihood) = -45012.71129710848
+getValue() (loglikelihood, optimizable by label likelihood) = -45462.71129710848
+getValue() (loglikelihood, optimizable by label likelihood) = -46920.71129710848
+getValue() (loglikelihood, optimizable by label likelihood) = -50504.693169880265
+getValue() (loglikelihood, optimizable by label likelihood) = -57934.0
+getValue() (loglikelihood, optimizable by label likelihood) = -59392.0
+getValue() (loglikelihood, optimizable by label likelihood) = -62920.0
+getValue() (loglikelihood, optimizable by label likelihood) = -70120.0
+getValue() (loglikelihood, optimizable by label likelihood) = -83684.0
+getValue() (loglikelihood, optimizable by label likelihood) = -87212.0
+getValue() (loglikelihood, optimizable by label likelihood) = -94412.0
+getValue() (loglikelihood, optimizable by label likelihood) = -107534.0
+getValue() (loglikelihood, optimizable by label likelihood) = -129710.0
+getValue() (loglikelihood, optimizable by label likelihood) = -129710.0
+getValue() (loglikelihood, optimizable by label likelihood) = -129910.0
+getValue() (loglikelihood, optimizable by label likelihood) = -131062.0
+getValue() (loglikelihood, optimizable by label likelihood) = -134534.0
+getValue() (loglikelihood, optimizable by label likelihood) = -134734.0
+getValue() (loglikelihood, optimizable by label likelihood) = -135886.0
+getValue() (loglikelihood, optimizable by label likelihood) = -139414.0
+getValue() (loglikelihood, optimizable by label likelihood) = -147606.0
+getValue() (loglikelihood, optimizable by label likelihood) = -148758.0
+getValue() (loglikelihood, optimizable by label likelihood) = -152286.0
+getValue() (loglikelihood, optimizable by label likelihood) = -160478.0
+getValue() (loglikelihood, optimizable by label likelihood) = -176704.0
+getValue() (loglikelihood, optimizable by label likelihood) = -180232.0
+getValue() (loglikelihood, optimizable by label likelihood) = -188424.0
+getValue() (loglikelihood, optimizable by label likelihood) = -204692.0
+getValue() (loglikelihood, optimizable by label likelihood) = -233888.69314718057
+getValue() (loglikelihood, optimizable by label likelihood) = -242080.69314718057
+getValue() (loglikelihood, optimizable by label likelihood) = -258280.69314718057
+getValue() (loglikelihood, optimizable by label likelihood) = -287080.69314718054
+getValue() (loglikelihood, optimizable by label likelihood) = -335344.0
+</system-err>
+  </testcase>
+  <testcase classname="cc.mallet.fst.tests.TestCRF" name="testValueGradient" time="6.133"/>
+  <testcase classname="cc.mallet.fst.tests.TestCRF" name="testTrain" time="0.325"/>
+  <testcase classname="cc.mallet.fst.tests.TestCRF" name="testAddOrderNStates" time="2.469">
+    <failure message="expected:&lt;-167.2234457483949&gt; but was:&lt;-363.62387563108734&gt;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: expected:&lt;-167.2234457483949&gt; but was:&lt;-363.62387563108734&gt;
+	at junit.framework.Assert.fail(Assert.java:50)
+	at junit.framework.Assert.failNotEquals(Assert.java:287)
+	at junit.framework.Assert.assertEquals(Assert.java:102)
+	at junit.framework.Assert.assertEquals(Assert.java:109)
+	at cc.mallet.fst.tests.TestCRF.testAddOrderNStates(TestCRF.java:668)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at junit.framework.TestCase.runTest(TestCase.java:168)
+	at junit.framework.TestCase.runBare(TestCase.java:134)
+	at junit.framework.TestResult$1.protect(TestResult.java:110)
+	at junit.framework.TestResult.runProtected(TestResult.java:128)
+	at junit.framework.TestResult.run(TestResult.java:113)
+	at junit.framework.TestCase.run(TestCase.java:124)
+	at junit.framework.TestSuite.runTest(TestSuite.java:243)
+	at junit.framework.TestSuite.run(TestSuite.java:238)
+	at org.junit.internal.runners.JUnit38ClassRunner.run(JUnit38ClassRunner.java:83)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+</failure>
+    <system-err>CRF input dictionary size = 483
+Number of weights = 656
+CRF about to train with 2147483647 iterations
+getValue() (loglikelihood, optimizable by label likelihood) = -1195.2077543232824
+getValue() (loglikelihood, optimizable by label likelihood) = -881.0952465796344
+getValue() (loglikelihood, optimizable by label likelihood) = -814.2955065616185
+CRF finished one iteration of maximizer, i=0
+getValue() (loglikelihood, optimizable by label likelihood) = -751.6865347379523
+CRF finished one iteration of maximizer, i=1
+getValue() (loglikelihood, optimizable by label likelihood) = -688.0682834371269
+CRF finished one iteration of maximizer, i=2
+getValue() (loglikelihood, optimizable by label likelihood) = -624.9986034687546
+CRF finished one iteration of maximizer, i=3
+getValue() (loglikelihood, optimizable by label likelihood) = -564.7978051043717
+CRF finished one iteration of maximizer, i=4
+getValue() (loglikelihood, optimizable by label likelihood) = -517.4895197294456
+CRF finished one iteration of maximizer, i=5
+getValue() (loglikelihood, optimizable by label likelihood) = -478.6579107448572
+CRF finished one iteration of maximizer, i=6
+getValue() (loglikelihood, optimizable by label likelihood) = -479.07278213447375
+getValue() (loglikelihood, optimizable by label likelihood) = -465.31680656836227
+CRF finished one iteration of maximizer, i=7
+getValue() (loglikelihood, optimizable by label likelihood) = -441.8483791015502
+CRF finished one iteration of maximizer, i=8
+getValue() (loglikelihood, optimizable by label likelihood) = -430.46877184257903
+CRF finished one iteration of maximizer, i=9
+getValue() (loglikelihood, optimizable by label likelihood) = -410.61194129520965
+CRF finished one iteration of maximizer, i=10
+getValue() (loglikelihood, optimizable by label likelihood) = -393.07065556363136
+CRF finished one iteration of maximizer, i=11
+getValue() (loglikelihood, optimizable by label likelihood) = -511.62511751542837
+getValue() (loglikelihood, optimizable by label likelihood) = -391.30605152889757
+CRF finished one iteration of maximizer, i=12
+getValue() (loglikelihood, optimizable by label likelihood) = -386.9491795468122
+CRF finished one iteration of maximizer, i=13
+getValue() (loglikelihood, optimizable by label likelihood) = -385.16957364418863
+CRF finished one iteration of maximizer, i=14
+getValue() (loglikelihood, optimizable by label likelihood) = -383.97478618079197
+CRF finished one iteration of maximizer, i=15
+getValue() (loglikelihood, optimizable by label likelihood) = -378.1653642954208
+CRF finished one iteration of maximizer, i=16
+getValue() (loglikelihood, optimizable by label likelihood) = -374.3361907030662
+CRF finished one iteration of maximizer, i=17
+getValue() (loglikelihood, optimizable by label likelihood) = -375.2433702055236
+getValue() (loglikelihood, optimizable by label likelihood) = -372.7231417445722
+CRF finished one iteration of maximizer, i=18
+getValue() (loglikelihood, optimizable by label likelihood) = -372.3457002971447
+CRF finished one iteration of maximizer, i=19
+getValue() (loglikelihood, optimizable by label likelihood) = -370.47843563075315
+CRF finished one iteration of maximizer, i=20
+getValue() (loglikelihood, optimizable by label likelihood) = -367.52013282641343
+CRF finished one iteration of maximizer, i=21
+getValue() (loglikelihood, optimizable by label likelihood) = -368.250358961644
+getValue() (loglikelihood, optimizable by label likelihood) = -366.8024984439312
+CRF finished one iteration of maximizer, i=22
+getValue() (loglikelihood, optimizable by label likelihood) = -366.4079758222726
+CRF finished one iteration of maximizer, i=23
+getValue() (loglikelihood, optimizable by label likelihood) = -366.2509666629692
+CRF finished one iteration of maximizer, i=24
+getValue() (loglikelihood, optimizable by label likelihood) = -365.77018248483836
+CRF finished one iteration of maximizer, i=25
+getValue() (loglikelihood, optimizable by label likelihood) = -365.5731205053038
+CRF finished one iteration of maximizer, i=26
+getValue() (loglikelihood, optimizable by label likelihood) = -365.162357325435
+CRF finished one iteration of maximizer, i=27
+getValue() (loglikelihood, optimizable by label likelihood) = -364.89669793907404
+CRF finished one iteration of maximizer, i=28
+getValue() (loglikelihood, optimizable by label likelihood) = -364.68510445028573
+CRF finished one iteration of maximizer, i=29
+getValue() (loglikelihood, optimizable by label likelihood) = -366.07838621181855
+getValue() (loglikelihood, optimizable by label likelihood) = -364.5391076431523
+CRF finished one iteration of maximizer, i=30
+getValue() (loglikelihood, optimizable by label likelihood) = -364.4118500350238
+CRF finished one iteration of maximizer, i=31
+getValue() (loglikelihood, optimizable by label likelihood) = -364.10905779468584
+CRF finished one iteration of maximizer, i=32
+getValue() (loglikelihood, optimizable by label likelihood) = -363.8644980003323
+CRF finished one iteration of maximizer, i=33
+getValue() (loglikelihood, optimizable by label likelihood) = -363.79983256035536
+CRF finished one iteration of maximizer, i=34
+getValue() (loglikelihood, optimizable by label likelihood) = -363.6279796241506
+CRF finished one iteration of maximizer, i=35
+getValue() (loglikelihood, optimizable by label likelihood) = -368.2830659369862
+getValue() (loglikelihood, optimizable by label likelihood) = -363.62387563108734
+Exiting L-BFGS on termination #1:
+value difference below tolerance (oldValue: -363.6279796241506 newValue: -363.62387563108734
+CRF finished one iteration of maximizer, i=36
+CRF training has converged, i=36
+CRF input dictionary size = 483
+Number of weights = 677
+CRF about to train with 2147483647 iterations
+getValue() (loglikelihood, optimizable by label likelihood) = -1195.2077543232824
+getValue() (loglikelihood, optimizable by label likelihood) = -1038.5129392585143
+getValue() (loglikelihood, optimizable by label likelihood) = -820.1875666223144
+CRF finished one iteration of maximizer, i=0
+getValue() (loglikelihood, optimizable by label likelihood) = -788.780169984874
+CRF finished one iteration of maximizer, i=1
+getValue() (loglikelihood, optimizable by label likelihood) = -746.0592732131707
+CRF finished one iteration of maximizer, i=2
+getValue() (loglikelihood, optimizable by label likelihood) = -690.0089901231922
+CRF finished one iteration of maximizer, i=3
+getValue() (loglikelihood, optimizable by label likelihood) = -625.818360777414
+CRF finished one iteration of maximizer, i=4
+getValue() (loglikelihood, optimizable by label likelihood) = -572.799867214665
+CRF finished one iteration of maximizer, i=5
+getValue() (loglikelihood, optimizable by label likelihood) = -543.2544353227972
+CRF finished one iteration of maximizer, i=6
+getValue() (loglikelihood, optimizable by label likelihood) = -1199.0184017749903
+getValue() (loglikelihood, optimizable by label likelihood) = -537.1962979412257
+CRF finished one iteration of maximizer, i=7
+getValue() (loglikelihood, optimizable by label likelihood) = -518.5019865617165
+CRF finished one iteration of maximizer, i=8
+getValue() (loglikelihood, optimizable by label likelihood) = -498.8846567589709
+CRF finished one iteration of maximizer, i=9
+getValue() (loglikelihood, optimizable by label likelihood) = -475.4369096521303
+CRF finished one iteration of maximizer, i=10
+getValue() (loglikelihood, optimizable by label likelihood) = -457.5025601364012
+CRF finished one iteration of maximizer, i=11
+getValue() (loglikelihood, optimizable by label likelihood) = -439.63313093007594
+CRF finished one iteration of maximizer, i=12
+getValue() (loglikelihood, optimizable by label likelihood) = -458.0363253479488
+getValue() (loglikelihood, optimizable by label likelihood) = -432.4001742262259
+CRF finished one iteration of maximizer, i=13
+getValue() (loglikelihood, optimizable by label likelihood) = -424.02882749092174
+CRF finished one iteration of maximizer, i=14
+getValue() (loglikelihood, optimizable by label likelihood) = -405.22595948350136
+CRF finished one iteration of maximizer, i=15
+getValue() (loglikelihood, optimizable by label likelihood) = -391.12439521059866
+CRF finished one iteration of maximizer, i=16
+getValue() (loglikelihood, optimizable by label likelihood) = -387.07476051429
+CRF finished one iteration of maximizer, i=17
+getValue() (loglikelihood, optimizable by label likelihood) = -384.9188277683917
+CRF finished one iteration of maximizer, i=18
+getValue() (loglikelihood, optimizable by label likelihood) = -384.3467440396928
+CRF finished one iteration of maximizer, i=19
+getValue() (loglikelihood, optimizable by label likelihood) = -379.7214667500521
+CRF finished one iteration of maximizer, i=20
+getValue() (loglikelihood, optimizable by label likelihood) = -376.10219925785316
+CRF finished one iteration of maximizer, i=21
+getValue() (loglikelihood, optimizable by label likelihood) = -372.3624514745919
+CRF finished one iteration of maximizer, i=22
+getValue() (loglikelihood, optimizable by label likelihood) = -373.3924914138728
+getValue() (loglikelihood, optimizable by label likelihood) = -371.41312317951696
+CRF finished one iteration of maximizer, i=23
+getValue() (loglikelihood, optimizable by label likelihood) = -370.0236506003476
+CRF finished one iteration of maximizer, i=24
+getValue() (loglikelihood, optimizable by label likelihood) = -368.52915538688836
+CRF finished one iteration of maximizer, i=25
+getValue() (loglikelihood, optimizable by label likelihood) = -367.8466717554579
+CRF finished one iteration of maximizer, i=26
+getValue() (loglikelihood, optimizable by label likelihood) = -367.069284341086
+CRF finished one iteration of maximizer, i=27
+getValue() (loglikelihood, optimizable by label likelihood) = -365.7033954022464
+CRF finished one iteration of maximizer, i=28
+getValue() (loglikelihood, optimizable by label likelihood) = -366.75166924205814
+getValue() (loglikelihood, optimizable by label likelihood) = -365.01859425203867
+CRF finished one iteration of maximizer, i=29
+getValue() (loglikelihood, optimizable by label likelihood) = -364.44154020912225
+CRF finished one iteration of maximizer, i=30
+getValue() (loglikelihood, optimizable by label likelihood) = -363.38311681865565
+CRF finished one iteration of maximizer, i=31
+getValue() (loglikelihood, optimizable by label likelihood) = -363.0331180030633
+CRF finished one iteration of maximizer, i=32
+getValue() (loglikelihood, optimizable by label likelihood) = -362.86296951466403
+CRF finished one iteration of maximizer, i=33
+getValue() (loglikelihood, optimizable by label likelihood) = -362.73610330466215
+CRF finished one iteration of maximizer, i=34
+getValue() (loglikelihood, optimizable by label likelihood) = -362.70122515779343
+Exiting L-BFGS on termination #1:
+value difference below tolerance (oldValue: -362.73610330466215 newValue: -362.70122515779343
+CRF finished one iteration of maximizer, i=35
+CRF training has converged, i=35
+CRF input dictionary size = 483
+Number of weights = 1584
+CRF about to train with 2147483647 iterations
+getValue() (loglikelihood, optimizable by label likelihood) = -1195.2077543232824
+getValue() (loglikelihood, optimizable by label likelihood) = -1037.066362718855
+getValue() (loglikelihood, optimizable by label likelihood) = -795.5584624325777
+CRF finished one iteration of maximizer, i=0
+getValue() (loglikelihood, optimizable by label likelihood) = -750.6275420323144
+CRF finished one iteration of maximizer, i=1
+getValue() (loglikelihood, optimizable by label likelihood) = -695.3168024473017
+CRF finished one iteration of maximizer, i=2
+getValue() (loglikelihood, optimizable by label likelihood) = -629.0886057612669
+CRF finished one iteration of maximizer, i=3
+getValue() (loglikelihood, optimizable by label likelihood) = -546.4256303188133
+CRF finished one iteration of maximizer, i=4
+getValue() (loglikelihood, optimizable by label likelihood) = -465.8630059695393
+CRF finished one iteration of maximizer, i=5
+getValue() (loglikelihood, optimizable by label likelihood) = -425.83834000607055
+CRF finished one iteration of maximizer, i=6
+getValue() (loglikelihood, optimizable by label likelihood) = -1703.30066935216
+getValue() (loglikelihood, optimizable by label likelihood) = -418.6120963961234
+CRF finished one iteration of maximizer, i=7
+getValue() (loglikelihood, optimizable by label likelihood) = -392.7593268681773
+CRF finished one iteration of maximizer, i=8
+getValue() (loglikelihood, optimizable by label likelihood) = -380.9726124761314
+CRF finished one iteration of maximizer, i=9
+getValue() (loglikelihood, optimizable by label likelihood) = -359.2012580418371
+CRF finished one iteration of maximizer, i=10
+getValue() (loglikelihood, optimizable by label likelihood) = -324.3037756684847
+CRF finished one iteration of maximizer, i=11
+getValue() (loglikelihood, optimizable by label likelihood) = -300.09818288206645
+CRF finished one iteration of maximizer, i=12
+getValue() (loglikelihood, optimizable by label likelihood) = -447.02962258723477
+getValue() (loglikelihood, optimizable by label likelihood) = -293.8288963665248
+CRF finished one iteration of maximizer, i=13
+getValue() (loglikelihood, optimizable by label likelihood) = -288.3006954305308
+CRF finished one iteration of maximizer, i=14
+getValue() (loglikelihood, optimizable by label likelihood) = -276.2600367325802
+CRF finished one iteration of maximizer, i=15
+getValue() (loglikelihood, optimizable by label likelihood) = -268.2266227767728
+CRF finished one iteration of maximizer, i=16
+getValue() (loglikelihood, optimizable by label likelihood) = -259.97796875354993
+CRF finished one iteration of maximizer, i=17
+getValue() (loglikelihood, optimizable by label likelihood) = -258.33831377761334
+CRF finished one iteration of maximizer, i=18
+getValue() (loglikelihood, optimizable by label likelihood) = -254.972155733867
+CRF finished one iteration of maximizer, i=19
+getValue() (loglikelihood, optimizable by label likelihood) = -251.87586743687456
+CRF finished one iteration of maximizer, i=20
+getValue() (loglikelihood, optimizable by label likelihood) = -251.57412970465765
+CRF finished one iteration of maximizer, i=21
+getValue() (loglikelihood, optimizable by label likelihood) = -250.3686139243521
+CRF finished one iteration of maximizer, i=22
+getValue() (loglikelihood, optimizable by label likelihood) = -248.98019106348863
+CRF finished one iteration of maximizer, i=23
+getValue() (loglikelihood, optimizable by label likelihood) = -248.54637142215523
+CRF finished one iteration of maximizer, i=24
+getValue() (loglikelihood, optimizable by label likelihood) = -245.83295640842994
+CRF finished one iteration of maximizer, i=25
+getValue() (loglikelihood, optimizable by label likelihood) = -245.54158875761073
+CRF finished one iteration of maximizer, i=26
+getValue() (loglikelihood, optimizable by label likelihood) = -244.84510630791885
+CRF finished one iteration of maximizer, i=27
+getValue() (loglikelihood, optimizable by label likelihood) = -244.57714809952307
+CRF finished one iteration of maximizer, i=28
+getValue() (loglikelihood, optimizable by label likelihood) = -242.93888288728465
+CRF finished one iteration of maximizer, i=29
+getValue() (loglikelihood, optimizable by label likelihood) = -243.7419069779857
+getValue() (loglikelihood, optimizable by label likelihood) = -242.85167230447905
+CRF finished one iteration of maximizer, i=30
+getValue() (loglikelihood, optimizable by label likelihood) = -242.66069459551653
+CRF finished one iteration of maximizer, i=31
+getValue() (loglikelihood, optimizable by label likelihood) = -242.2262066216917
+CRF finished one iteration of maximizer, i=32
+getValue() (loglikelihood, optimizable by label likelihood) = -241.8323619331473
+CRF finished one iteration of maximizer, i=33
+getValue() (loglikelihood, optimizable by label likelihood) = -241.46583092700467
+CRF finished one iteration of maximizer, i=34
+getValue() (loglikelihood, optimizable by label likelihood) = -241.6942949839716
+getValue() (loglikelihood, optimizable by label likelihood) = -241.34194641020684
+CRF finished one iteration of maximizer, i=35
+getValue() (loglikelihood, optimizable by label likelihood) = -241.1557511311239
+CRF finished one iteration of maximizer, i=36
+getValue() (loglikelihood, optimizable by label likelihood) = -241.07459151619787
+CRF finished one iteration of maximizer, i=37
+getValue() (loglikelihood, optimizable by label likelihood) = -241.03031084946772
+CRF finished one iteration of maximizer, i=38
+getValue() (loglikelihood, optimizable by label likelihood) = -240.96678828945687
+CRF finished one iteration of maximizer, i=39
+getValue() (loglikelihood, optimizable by label likelihood) = -240.9023789693753
+CRF finished one iteration of maximizer, i=40
+getValue() (loglikelihood, optimizable by label likelihood) = -240.89295384533358
+Exiting L-BFGS on termination #1:
+value difference below tolerance (oldValue: -240.9023789693753 newValue: -240.89295384533358
+CRF finished one iteration of maximizer, i=41
+CRF training has converged, i=41
+Number of weights = 794
+getValue() (loglikelihood, optimizable by label likelihood) = -363.62387563108734
+Number of weights = 798
+getValue() (loglikelihood, optimizable by label likelihood) = -362.70122515779343
+Number of weights = 1757
+getValue() (loglikelihood, optimizable by label likelihood) = -240.89295384533358
+</system-err>
+  </testcase>
+  <testcase classname="cc.mallet.fst.tests.TestCRF" name="testFrozenWeights" time="1.429"/>
+  <testcase classname="cc.mallet.fst.tests.TestCRF" name="testDenseTrain" time="0.811"/>
+  <testcase classname="cc.mallet.fst.tests.TestCRF" name="testTrainStochasticGradient" time="3.018"/>
+  <testcase classname="cc.mallet.fst.tests.TestCRF" name="testSumLatticeImplementations" time="58.748"/>
+  <testcase classname="cc.mallet.fst.tests.TestCRF" name="testSerialization" time="0.259"/>
+  <testcase classname="cc.mallet.fst.tests.TestCRF" name="testDenseSerialization" time="0.192"/>
+  <testcase classname="cc.mallet.fst.tests.TestCRF" name="testTokenAccuracy" time="0.3">
+    <failure message="expected:&lt;0.9409&gt; but was:&lt;0.9101497504159733&gt;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: expected:&lt;0.9409&gt; but was:&lt;0.9101497504159733&gt;
+	at junit.framework.Assert.fail(Assert.java:50)
+	at junit.framework.Assert.failNotEquals(Assert.java:287)
+	at junit.framework.Assert.assertEquals(Assert.java:102)
+	at junit.framework.Assert.assertEquals(Assert.java:109)
+	at cc.mallet.fst.tests.TestCRF.testTokenAccuracy(TestCRF.java:868)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at junit.framework.TestCase.runTest(TestCase.java:168)
+	at junit.framework.TestCase.runBare(TestCase.java:134)
+	at junit.framework.TestResult$1.protect(TestResult.java:110)
+	at junit.framework.TestResult.runProtected(TestResult.java:128)
+	at junit.framework.TestResult.run(TestResult.java:113)
+	at junit.framework.TestCase.run(TestCase.java:124)
+	at junit.framework.TestSuite.runTest(TestSuite.java:243)
+	at junit.framework.TestSuite.run(TestSuite.java:238)
+	at org.junit.internal.runners.JUnit38ClassRunner.run(JUnit38ClassRunner.java:83)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+</failure>
+    <system-err>CRF input dictionary size = 483
+Number of weights = 688
+CRF about to train with 2147483647 iterations
+getValue() (loglikelihood, optimizable by label likelihood) = -1955.3681963596096
+getValue() (loglikelihood, optimizable by label likelihood) = -1463.4333132858242
+getValue() (loglikelihood, optimizable by label likelihood) = -1355.2306922478876
+CRF finished one iteration of maximizer, i=0
+getValue() (loglikelihood, optimizable by label likelihood) = -1272.0289615693591
+CRF finished one iteration of maximizer, i=1
+getValue() (loglikelihood, optimizable by label likelihood) = -1172.1832791824597
+CRF finished one iteration of maximizer, i=2
+getValue() (loglikelihood, optimizable by label likelihood) = -1076.4169799577246
+CRF finished one iteration of maximizer, i=3
+getValue() (loglikelihood, optimizable by label likelihood) = -965.4238752663546
+CRF finished one iteration of maximizer, i=4
+getValue() (loglikelihood, optimizable by label likelihood) = -877.9267809948597
+CRF finished one iteration of maximizer, i=5
+getValue() (loglikelihood, optimizable by label likelihood) = -816.8186203071515
+CRF finished one iteration of maximizer, i=6
+getValue() (loglikelihood, optimizable by label likelihood) = -823.2335780580562
+getValue() (loglikelihood, optimizable by label likelihood) = -796.4068830073012
+CRF finished one iteration of maximizer, i=7
+getValue() (loglikelihood, optimizable by label likelihood) = -756.0406287580097
+CRF finished one iteration of maximizer, i=8
+getValue() (loglikelihood, optimizable by label likelihood) = -736.6162462457635
+CRF finished one iteration of maximizer, i=9
+getValue() (loglikelihood, optimizable by label likelihood) = -703.0917495756984
+CRF finished one iteration of maximizer, i=10
+getValue() (loglikelihood, optimizable by label likelihood) = -663.0854821855525
+CRF finished one iteration of maximizer, i=11
+getValue() (loglikelihood, optimizable by label likelihood) = -706.8678767077906
+getValue() (loglikelihood, optimizable by label likelihood) = -655.9199888320665
+CRF finished one iteration of maximizer, i=12
+getValue() (loglikelihood, optimizable by label likelihood) = -644.8240098867524
+CRF finished one iteration of maximizer, i=13
+getValue() (loglikelihood, optimizable by label likelihood) = -641.1767743314496
+CRF finished one iteration of maximizer, i=14
+getValue() (loglikelihood, optimizable by label likelihood) = -632.5130251946662
+CRF finished one iteration of maximizer, i=15
+getValue() (loglikelihood, optimizable by label likelihood) = -617.935764094052
+CRF finished one iteration of maximizer, i=16
+getValue() (loglikelihood, optimizable by label likelihood) = -601.5376821646846
+CRF finished one iteration of maximizer, i=17
+getValue() (loglikelihood, optimizable by label likelihood) = -619.4927799210471
+getValue() (loglikelihood, optimizable by label likelihood) = -595.690992985543
+CRF finished one iteration of maximizer, i=18
+getValue() (loglikelihood, optimizable by label likelihood) = -592.3449812754552
+CRF finished one iteration of maximizer, i=19
+getValue() (loglikelihood, optimizable by label likelihood) = -589.3877441456415
+CRF finished one iteration of maximizer, i=20
+getValue() (loglikelihood, optimizable by label likelihood) = -585.5440467288911
+CRF finished one iteration of maximizer, i=21
+getValue() (loglikelihood, optimizable by label likelihood) = -585.5589483306205
+getValue() (loglikelihood, optimizable by label likelihood) = -583.9276344479016
+CRF finished one iteration of maximizer, i=22
+getValue() (loglikelihood, optimizable by label likelihood) = -583.841924174413
+CRF finished one iteration of maximizer, i=23
+getValue() (loglikelihood, optimizable by label likelihood) = -581.9452601815119
+CRF finished one iteration of maximizer, i=24
+getValue() (loglikelihood, optimizable by label likelihood) = -581.3326164853703
+CRF finished one iteration of maximizer, i=25
+getValue() (loglikelihood, optimizable by label likelihood) = -580.5866698062006
+CRF finished one iteration of maximizer, i=26
+getValue() (loglikelihood, optimizable by label likelihood) = -579.1764790993917
+CRF finished one iteration of maximizer, i=27
+getValue() (loglikelihood, optimizable by label likelihood) = -576.1397415439698
+CRF finished one iteration of maximizer, i=28
+getValue() (loglikelihood, optimizable by label likelihood) = -589.5268012335291
+getValue() (loglikelihood, optimizable by label likelihood) = -575.8956668993719
+CRF finished one iteration of maximizer, i=29
+getValue() (loglikelihood, optimizable by label likelihood) = -574.9026025185631
+CRF finished one iteration of maximizer, i=30
+getValue() (loglikelihood, optimizable by label likelihood) = -574.6619538705431
+CRF finished one iteration of maximizer, i=31
+getValue() (loglikelihood, optimizable by label likelihood) = -574.4972470484747
+CRF finished one iteration of maximizer, i=32
+getValue() (loglikelihood, optimizable by label likelihood) = -574.176749504905
+CRF finished one iteration of maximizer, i=33
+getValue() (loglikelihood, optimizable by label likelihood) = -573.6882043129953
+CRF finished one iteration of maximizer, i=34
+getValue() (loglikelihood, optimizable by label likelihood) = -573.616547289547
+CRF finished one iteration of maximizer, i=35
+getValue() (loglikelihood, optimizable by label likelihood) = -573.2659195287838
+CRF finished one iteration of maximizer, i=36
+getValue() (loglikelihood, optimizable by label likelihood) = -573.1610391974525
+CRF finished one iteration of maximizer, i=37
+getValue() (loglikelihood, optimizable by label likelihood) = -572.8835540756309
+CRF finished one iteration of maximizer, i=38
+getValue() (loglikelihood, optimizable by label likelihood) = -572.6309425625758
+CRF finished one iteration of maximizer, i=39
+getValue() (loglikelihood, optimizable by label likelihood) = -572.5574049111677
+CRF finished one iteration of maximizer, i=40
+getValue() (loglikelihood, optimizable by label likelihood) = -572.4714206096697
+CRF finished one iteration of maximizer, i=41
+getValue() (loglikelihood, optimizable by label likelihood) = -572.4587076501446
+Exiting L-BFGS on termination #1:
+value difference below tolerance (oldValue: -572.4714206096697 newValue: -572.4587076501446
+CRF finished one iteration of maximizer, i=42
+CRF training has converged, i=42
+Test accuracy=0.9101497504159733
+</system-err>
+  </testcase>
+  <testcase classname="cc.mallet.fst.tests.TestCRF" name="testCopyStatesAndWeights" time="0.003"/>
+  <testcase classname="cc.mallet.fst.tests.TestCRF" name="testStartState" time="0.009"/>
+  <testcase classname="cc.mallet.fst.tests.TestCRF" name="testDenseFeatureSelection" time="0.233"/>
+  <testcase classname="cc.mallet.fst.tests.TestCRF" name="testXis" time="0.512"/>
+  <testcase classname="cc.mallet.fst.tests.TestCRF" name="testStateAddWeights" time="1.179"/>
+</testsuite>

@@ -24,7 +24,7 @@ public class RTopicModel extends ParallelTopicModel {
 	
 	private RTopicModel(ParallelTopicModel model) {
 		super(model.getTopicAlphabet(), model.alphaSum, model.beta);
-		this.data = model.data;
+		this.data = (ArrayList) model.data.clone();
 	    this.alphabet = model.alphabet;
 	    this.topicAlphabet = model.topicAlphabet;
 	    this.numTopics = model.numTopics;
@@ -58,6 +58,13 @@ public class RTopicModel extends ParallelTopicModel {
 	    this.typeTotals = model.typeTotals;
 	    this.maxTypeCount = model.maxTypeCount;
 	    this.numThreads = model.numThreads;
+	    
+	    InstanceList instanceList = new InstanceList();
+	    for (TopicAssignment topic : model.data) {
+			instanceList.add(topic.instance);
+		}
+	    
+	    this.instances = instanceList;
 	    
 	    this.initializeHistograms();
 	}
